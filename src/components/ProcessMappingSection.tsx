@@ -11,22 +11,36 @@ const processSteps = [
     title: "Steel & Raw Material Management",
     icon: Package,
     description: "Steel coils, components, and parts inventory management",
-    currentProcess: "Manual inventory checks, paper-based tracking, periodic audits",
     industry4Opportunities: [
       {
         technology: "IoT Sensors",
-        application: "Automated inventory tracking with weight sensors, RFID tags, and smart shelving",
-        benefit: "Real-time inventory levels, automated reordering, reduced stockouts"
+        application: "Automated inventory tracking with weight sensors, RFID tags, and smart shelving for steel coils and components",
+        benefit: "Real-time inventory visibility, automated stock alerts, elimination of physical counts, reduced stockouts by 60%"
       },
       {
         technology: "Big Data Analytics",
-        application: "Material usage pattern analysis, demand forecasting, and supplier optimization",
-        benefit: "Optimized inventory levels, reduced carrying costs, improved supplier performance"
+        application: "Predictive material consumption analysis linking production schedules to raw material needs with supplier lead time optimization",
+        benefit: "Optimized inventory levels reducing working capital by 25%, improved supplier performance metrics, prevention of production delays"
       },
       {
         technology: "Mobile Apps",
-        application: "Mobile scanning for material receiving, tracking, and quality verification",
-        benefit: "Faster processing, reduced manual errors, real-time updates"
+        application: "Mobile scanning for material receiving with photo documentation, quality checks, and digital gate pass management",
+        benefit: "Paperless receiving process, faster material verification, instant quality issue flagging, complete traceability from supplier to line"
+      },
+      {
+        technology: "Computer Vision",
+        application: "Automated inspection of incoming steel coils for surface defects, dimensional verification, and grade identification",
+        benefit: "100% incoming inspection without delays, early detection of material quality issues, reduced production rejections"
+      },
+      {
+        technology: "Blockchain",
+        application: "Immutable tracking of material certificates, heat numbers, and quality documentation across supply chain",
+        benefit: "Complete material traceability for recalls, compliance proof, supplier accountability, quality audit efficiency"
+      },
+      {
+        technology: "Automated Guided Vehicles",
+        application: "AGVs for automated steel coil transportation from warehouse to stamping presses based on production schedule",
+        benefit: "Reduced material handling time, improved safety, optimized warehouse space utilization, just-in-time delivery to production"
       }
     ]
   },
@@ -35,22 +49,36 @@ const processSteps = [
     title: "Body Shop - Stamping & Welding",
     icon: Settings,
     description: "Metal stamping operations and robotic welding processes",
-    currentProcess: "Semi-automated stamping with manual setup, robotic welding with periodic monitoring",
     industry4Opportunities: [
       {
         technology: "IoT Sensors",
-        application: "Continuous monitoring of press tonnage, temperature, and weld parameters",
-        benefit: "Consistent part quality, early detection of tool wear, reduced scrap"
+        application: "Real-time monitoring of press tonnage, slide position, die temperature, and weld current/voltage with millisecond-level data capture",
+        benefit: "Consistent part quality with ±0.1mm tolerance, early detection of die wear before defects occur, 40% reduction in scrap rates"
       },
       {
         technology: "AI/ML",
-        application: "Predictive maintenance for stamping dies and weld gun tips",
-        benefit: "Reduced unplanned downtime, optimized tool life, improved OEE"
+        application: "Predictive maintenance using vibration analysis, thermal imaging, and acoustic sensors to predict stamping die failures and weld gun degradation",
+        benefit: "Reduced unplanned downtime by 70%, optimized die maintenance schedules, 30% improvement in OEE, cost savings on premature die changes"
       },
       {
         technology: "Digital Twin",
-        application: "Virtual model of stamping and welding processes for optimization",
-        benefit: "Process improvement without production disruption, virtual tryouts"
+        application: "Virtual model simulating metal flow in stamping, springback prediction, and weld pattern optimization before physical production",
+        benefit: "Process improvement without disrupting production, virtual tryouts saving weeks of setup time, reduced new model launch defects by 50%"
+      },
+      {
+        technology: "Computer Vision",
+        application: "Automated 100% inspection of stamped parts for cracks, tears, and dimensional accuracy with 3D scanning technology",
+        benefit: "Zero-defect forwarding to next process, immediate feedback for die adjustment, elimination of manual inspection subjectivity"
+      },
+      {
+        technology: "Robotics",
+        application: "Collaborative robots for in-line weld inspection, part handling between presses, and adaptive weld path correction",
+        benefit: "Improved weld consistency, reduced operator ergonomic strain, flexible redeployment for new models, 24/7 operation capability"
+      },
+      {
+        technology: "Edge Computing",
+        application: "Local processing of sensor data for instant press shutdown on anomalies and real-time weld quality assessment",
+        benefit: "Sub-second response to prevent die damage, reduced data transmission costs, continued operation during network issues"
       }
     ]
   },
@@ -59,22 +87,36 @@ const processSteps = [
     title: "Paint Shop Operations",
     icon: Factory,
     description: "Surface treatment, painting, and coating processes",
-    currentProcess: "Automated spray systems with manual quality checks and touch-ups",
     industry4Opportunities: [
       {
         technology: "Computer Vision",
-        application: "Automated paint defect detection and color matching verification",
-        benefit: "100% inspection coverage, consistent quality, reduced rework"
+        application: "AI-powered automated defect detection identifying orange peel, runs, dirt particles, and color mismatch with micron-level precision",
+        benefit: "100% inspection replacing manual spotters, 60% reduction in final inspection rework, consistent quality across all shifts, defect root cause analysis"
       },
       {
         technology: "Robotics",
-        application: "Advanced robotic spray systems with adaptive path planning",
-        benefit: "Optimal paint application, reduced material waste, consistent finish"
+        application: "Intelligent robotic spray systems with adaptive path planning, automatic flow adjustment, and multi-color capability without manual changeover",
+        benefit: "Optimal paint thickness uniformity, 30% reduction in paint consumption, 50% faster color changeover, consistent finish quality, reduced VOC emissions"
       },
       {
         technology: "IoT Sensors",
-        application: "Environmental monitoring of temperature, humidity, and air quality",
-        benefit: "Optimal painting conditions, reduced defects, compliance tracking"
+        application: "Continuous monitoring of booth temperature, humidity, air velocity, paint viscosity, and particulate levels with automated HVAC adjustment",
+        benefit: "Optimal painting conditions 24/7, 45% reduction in climate-related defects, automated compliance reporting, energy optimization, predictive booth maintenance"
+      },
+      {
+        technology: "Digital Twin",
+        application: "Virtual paint booth simulation for testing new paint formulations, robot programs, and airflow patterns before physical application",
+        benefit: "Reduced trial-and-error iterations, new color launch time cut by 40%, optimized booth performance, training without production loss"
+      },
+      {
+        technology: "AI/ML",
+        application: "Predictive quality models correlating booth conditions, paint batch properties, and application parameters to final finish quality",
+        benefit: "Proactive adjustment preventing defects before they occur, optimized process parameters for each paint type, reduced customer complaints by 55%"
+      },
+      {
+        technology: "MES Integration",
+        application: "Real-time tracking of vehicles through paint shop with color scheduling optimization and automatic paint kitchen preparation",
+        benefit: "Reduced color grouping inefficiencies, just-in-time paint mixing reducing waste, complete traceability linking paint batch to VIN, improved throughput"
       }
     ]
   },
@@ -83,22 +125,36 @@ const processSteps = [
     title: "Engine & Transmission Assembly",
     icon: Cog,
     description: "Powertrain assembly and testing operations",
-    currentProcess: "Semi-automated assembly lines with manual testing and inspection",
     industry4Opportunities: [
       {
         technology: "Robotics",
-        application: "Collaborative robots for precision assembly and handling",
-        benefit: "Consistent assembly quality, reduced ergonomic stress, improved efficiency"
+        application: "Collaborative robots for precision torque application, heavy component lifting, and complex sub-assembly operations with force-sensing",
+        benefit: "Consistent torque accuracy eliminating over/under-tightening, reduced operator musculoskeletal injuries by 80%, improved cycle time, flexible redeployment"
       },
       {
         technology: "Computer Vision",
-        application: "Automated inspection of assembly quality and component verification",
-        benefit: "Zero-defect assembly, immediate feedback, traceability"
+        application: "Automated verification of correct parts, assembly sequence, torque validation, and gasket positioning with multi-camera inspection stations",
+        benefit: "Zero-defect assembly preventing field failures, immediate feedback before next operation, complete digital twin of every engine, elimination of missed operations"
       },
       {
         technology: "AR Technology",
-        application: "AR guidance for complex assembly procedures and maintenance",
-        benefit: "Reduced training time, fewer assembly errors, faster troubleshooting"
+        application: "AR smart glasses providing step-by-step assembly guidance, torque specifications, and real-time quality alerts with hands-free operation",
+        benefit: "50% reduction in training time for new operators, near-zero assembly errors, faster troubleshooting with remote expert support, easy adaptation to new models"
+      },
+      {
+        technology: "IoT Sensors",
+        application: "Smart torque tools transmitting actual torque values, angle measurements, and assembly sequence data linked to engine serial number",
+        benefit: "Complete assembly traceability for warranty claims, automatic documentation eliminating manual recording, prevention of tool-related quality issues, audit trail"
+      },
+      {
+        technology: "AI/ML",
+        application: "Predictive models analyzing assembly data to identify potential quality issues before hot testing and predict warranty failures",
+        benefit: "Early detection of assembly anomalies, optimized testing parameters, reduced warranty costs by 35%, continuous process improvement insights"
+      },
+      {
+        technology: "Digital Work Instructions",
+        application: "Interactive digital displays at each workstation with dynamic instructions adapting to engine variant, error-proofing, and immediate updates",
+        benefit: "Elimination of paper-based confusion, instant engineering change implementation, multi-language support, reduced wrong-part assembly by 90%"
       }
     ]
   },
@@ -107,22 +163,36 @@ const processSteps = [
     title: "Final Assembly Line",
     icon: Car,
     description: "Complete vehicle assembly and integration",
-    currentProcess: "Conveyor-based assembly with manual operations and quality checks",
     industry4Opportunities: [
       {
         technology: "IoT Sensors",
-        application: "Real-time tracking of assembly progress and quality parameters",
-        benefit: "Improved line balancing, immediate quality feedback, full traceability"
+        application: "Real-time tracking of each vehicle position, takt time adherence, quality gate results, and andon alerts with digital dashboard visibility",
+        benefit: "Improved line balancing with 95%+ takt time adherence, immediate quality feedback preventing defect forwarding, full VIN-level traceability, proactive bottleneck resolution"
       },
       {
         technology: "Robotics",
-        application: "Automated material handling and precise component installation",
-        benefit: "Consistent assembly, reduced manual handling, improved safety"
+        application: "Automated windshield installation, precise dashboard mounting, seat installation, and collaborative tire mounting with quality verification",
+        benefit: "Consistent installation quality, 70% reduction in ergonomic injuries, improved safety, precise positioning eliminating rework, flexible multi-model capability"
       },
       {
         technology: "Big Data Analytics",
-        application: "Analysis of assembly line efficiency and bottleneck identification",
-        benefit: "Optimized production flow, reduced cycle time, improved throughput"
+        application: "Real-time analysis of cycle times, downtime reasons, operator efficiency, and quality correlation with predictive bottleneck alerts",
+        benefit: "Optimized production flow increasing output by 12%, reduced cycle time through waste elimination, data-driven continuous improvement, proactive capacity planning"
+      },
+      {
+        technology: "Computer Vision",
+        application: "Automated verification of component fitment, VIN matching to build specification, and completeness checking at each major station",
+        benefit: "Zero wrong-variant assembly, elimination of missing parts reaching customers, instant detection of fitment issues, reduced final inspection time by 40%"
+      },
+      {
+        technology: "Andon System 4.0",
+        application: "Intelligent andon with automatic escalation, mobile alerts to supervisors, AI-suggested solutions based on historical data, and predictive issue flagging",
+        benefit: "Faster problem resolution reducing line stops by 50%, automated root cause capture, knowledge sharing across shifts, predictive alerts before line stop"
+      },
+      {
+        technology: "AGV/AMR",
+        application: "Autonomous mobile robots delivering parts to line-side based on real-time consumption with route optimization and auto-replenishment",
+        benefit: "Just-in-time parts delivery eliminating line-side inventory, reduced material handling labor by 60%, optimized floor space utilization, flexible routing for new models"
       }
     ]
   },
@@ -131,22 +201,41 @@ const processSteps = [
     title: "Quality Testing & Logistics",
     icon: Wrench,
     description: "Final testing, inspection, and vehicle dispatch",
-    currentProcess: "Manual testing procedures with paper-based documentation",
     industry4Opportunities: [
       {
         technology: "Automated Testing",
-        application: "Automated brake testing, alignment, and emission analysis",
-        benefit: "Consistent test results, reduced testing time, improved accuracy"
+        application: "Automated brake dynamometer testing, laser wheel alignment, emission analysis, headlight aim, and water leak testing with automatic documentation",
+        benefit: "Consistent test results with ±1% accuracy, 60% reduction in testing time, improved safety compliance, elimination of human error, complete test records"
       },
       {
         technology: "IoT/RFID",
-        application: "Smart tracking throughout logistics chain with GPS monitoring",
-        benefit: "Real-time vehicle location, damage prevention, delivery optimization"
+        application: "Real-time vehicle tracking from line-off to dealer delivery with GPS, geofencing, condition monitoring, and automated milestone updates",
+        benefit: "Real-time vehicle location for customer queries, damage prevention through driving behavior monitoring, optimized yard management, reduced search time by 90%"
       },
       {
         technology: "Big Data Analytics",
-        application: "Analysis of quality trends and logistics optimization",
-        benefit: "Predictive quality insights, optimized delivery routes, cost reduction"
+        application: "Correlation analysis of quality data with production variables, warranty prediction models, and logistics route optimization with cost analytics",
+        benefit: "Predictive quality insights enabling upstream corrections, 25% reduction in warranty costs, optimized delivery routes saving fuel costs, improved dealer satisfaction"
+      },
+      {
+        technology: "Computer Vision",
+        application: "360-degree automated exterior inspection documenting pre-existing conditions, paint quality verification, and fitment assessment with AI comparison to CAD",
+        benefit: "100% documentation protecting against false damage claims, objective quality assessment, reduced inspection time by 75%, early detection of systematic issues"
+      },
+      {
+        technology: "AI/ML",
+        application: "Predictive models identifying vehicles likely to have issues based on production anomalies with intelligent sampling recommendations",
+        benefit: "Risk-based quality auditing focusing resources on high-risk units, early detection of quality trends, reduced customer complaints by 40%, optimized audit efficiency"
+      },
+      {
+        technology: "Blockchain",
+        application: "Immutable digital birth certificate recording all production data, quality tests, and logistics events accessible to dealers and customers",
+        benefit: "Complete vehicle history for resale value, fraud prevention, instant compliance proof, enhanced customer trust, streamlined warranty claims"
+      },
+      {
+        technology: "Digital Twin",
+        application: "Digital replica of each vehicle maintaining all production, quality, and service data throughout vehicle lifecycle with predictive maintenance",
+        benefit: "Proactive service recommendations, optimized recall targeting, continuous product improvement feedback, enhanced customer experience, valuable data asset"
       }
     ]
   }
@@ -173,7 +262,15 @@ const ProcessMappingSection: React.FC<ProcessMappingSectionProps> = ({ onComplet
       'Digital Twin': 'bg-red-100 text-red-800',
       'Robotics': 'bg-gray-100 text-gray-800',
       'AR Technology': 'bg-orange-100 text-orange-800',
-      'IoT/RFID': 'bg-cyan-100 text-cyan-800'
+      'IoT/RFID': 'bg-cyan-100 text-cyan-800',
+      'Blockchain': 'bg-yellow-100 text-yellow-800',
+      'Automated Guided Vehicles': 'bg-indigo-100 text-indigo-800',
+      'Edge Computing': 'bg-teal-100 text-teal-800',
+      'MES Integration': 'bg-lime-100 text-lime-800',
+      'Digital Work Instructions': 'bg-rose-100 text-rose-800',
+      'Andon System 4.0': 'bg-amber-100 text-amber-800',
+      'AGV/AMR': 'bg-indigo-100 text-indigo-800',
+      'Automated Testing': 'bg-emerald-100 text-emerald-800'
     };
     return colorMap[tech] || 'bg-gray-100 text-gray-800';
   };
@@ -224,12 +321,7 @@ const ProcessMappingSection: React.FC<ProcessMappingSectionProps> = ({ onComplet
                         Step {process.id}
                       </div>
                     </div>
-                    
-                    <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4">
-                      <h4 className="font-semibold text-yellow-800 mb-1">Current Process:</h4>
-                      <p className="text-sm text-yellow-700">{process.currentProcess}</p>
-                    </div>
-                    
+
                     {isSelected && (
                       <div className="space-y-4 animate-fadeIn">
                         <h4 className="text-lg font-semibold text-gray-900">Industry 4.0 Opportunities:</h4>
