@@ -14,7 +14,6 @@ const revolutions = [
     color: "brown",
     keyTechnology: "Steam Power & Mechanization",
     description: "Mechanization of production using water and steam power - from hand production to machines",
-    bloodBagContext: "Manual glass bottle collection methods, handcraft production",
     impact: "Moved from handicraft workshops to mechanized production in factories",
     examples: ["Steam engines for powering machines", "Water wheels and power looms", "Railroad networks", "Textile mills with mechanical power"],
     keyPoint: "This era was about mechanization – using machines (powered by steam or water) instead of purely human or animal muscle. It dramatically increased production capacity, and cities and factories emerged."
@@ -27,7 +26,6 @@ const revolutions = [
     color: "yellow",
     keyTechnology: "Electricity & Assembly Lines",
     description: "Mass production through electrical power and division of labor - standardized manufacturing at scale",
-    bloodBagContext: "Introduction of basic plastic blood containers, early mass production techniques",
     impact: "Standardized mass production and quality control - making identical products by millions",
     examples: ["Henry Ford's assembly line (1913)", "Electric motors for individual machines", "Telegraph and telephone communication", "Model T cars mass production"],
     keyPoint: "Industry 2.0 brought cost-effective production at scale. We got early control systems and communication tech that helped manage bigger operations. Productivity and standardization soared."
@@ -40,7 +38,6 @@ const revolutions = [
     color: "blue", 
     keyTechnology: "Computers & Automation",
     description: "Automation using electronics, computers, and programmable logic controllers - the Digital Revolution",
-    bloodBagContext: "Automated blood bag manufacturing with basic computerized controls and PLCs",
     impact: "Programmable automation and computerized manufacturing - precision and control with minimal human input",
     examples: ["PLCs (Programmable Logic Controllers)", "Industrial robots (first in GM plant, 1961)", "CAD/CAM systems", "Microprocessors and semiconductor electronics"],
     keyPoint: "If Industry 2.0 was about scale, 3.0 was about precision and control. We started using IT systems to manage manufacturing, but machines often operated in silos requiring human coordination."
@@ -51,9 +48,8 @@ const revolutions = [
     period: "2011-Present",
     icon: Brain,
     color: "purple",
-    keyTechnology: "IoT, AI & Cyber-Physical Systems", 
+    keyTechnology: "IoT, AI & Cyber-Physical Systems",
     description: "Smart, connected systems with artificial intelligence and machine learning - minimal human intervention in decision-making",
-    bloodBagContext: "Smart blood bag production with predictive analytics, real-time quality monitoring, and autonomous optimization",
     impact: "Intelligent, adaptive, and self-optimizing manufacturing - factories that largely run themselves",
     examples: ["IoT sensors everywhere", "AI/ML for decision making", "Digital twins of production", "Predictive maintenance", "Smart robots that adapt"],
     keyPoint: "Unlike Industry 3.0's fixed automation, Industry 4.0 introduces 'cyber-physical systems' where physical machines are deeply integrated with networks and software, continuously communicating and adapting."
@@ -148,19 +144,11 @@ const EvolutionSection: React.FC<EvolutionSectionProps> = ({ onComplete }) => {
                         </span>
                       </div>
                       
-                      <div className="grid md:grid-cols-2 gap-4 mb-4">
-                        <div>
-                          <h4 className="font-semibold text-gray-800 mb-2">Key Technology</h4>
-                          <p className={`text-sm p-3 rounded-lg ${getColorClasses(revolution.color)}`}>
-                            {revolution.keyTechnology}
-                          </p>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-800 mb-2">Blood Collection Context</h4>
-                          <p className="text-sm text-gray-700 bg-white p-3 rounded-lg border border-gray-200">
-                            {revolution.bloodBagContext}
-                          </p>
-                        </div>
+                      <div className="mb-4">
+                        <h4 className="font-semibold text-gray-800 mb-2">Key Technology</h4>
+                        <p className={`text-sm p-3 rounded-lg ${getColorClasses(revolution.color)}`}>
+                          {revolution.keyTechnology}
+                        </p>
                       </div>
 
                       <p className="text-sm text-gray-700 mb-4">{revolution.description}</p>
