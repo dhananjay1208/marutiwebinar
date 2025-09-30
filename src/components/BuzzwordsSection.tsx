@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Lightbulb, ArrowRight, Check, Factory, Zap, Database, Cog } from 'lucide-react';
+import { Lightbulb, ArrowRight, Check, Factory, Zap, Database, Cog, Network } from 'lucide-react';
 
 interface BuzzwordsSectionProps {
   onComplete: () => void;
@@ -10,7 +10,7 @@ const mainConcepts = [
     term: "Industry 4.0",
     subtitle: "The Fourth Industrial Revolution",
     definition: "Integrating digital technologies, data, and automation into manufacturing production to create smart, connected systems.",
-    example: "Smart blood bag production lines with IoT sensors monitoring every step, AI optimizing quality control, and systems that communicate and make real-time decisions.",
+    example: "Smart vehicle assembly lines with IoT sensors monitoring every step, AI optimizing quality control, and systems that communicate and make real-time decisions.",
     color: "blue",
     icon: Factory,
     keyPoints: [
@@ -24,7 +24,7 @@ const mainConcepts = [
     term: "Smart Manufacturing",
     subtitle: "Intelligent Production Systems",
     definition: "Manufacturing that emphasizes intelligent, real-time decision-making and flexibility using connected technologies.",
-    example: "Production systems that automatically adjust blood bag manufacturing speed when detecting delays, or alert maintenance before equipment fails.",
+    example: "Production systems that automatically adjust vehicle assembly speed when detecting bottlenecks, or alert maintenance before equipment fails.",
     color: "green",
     icon: Zap,
     keyPoints: [
@@ -32,6 +32,20 @@ const mainConcepts = [
       "Higher productivity and flexibility",
       "Data-driven process optimization",
       "Essentially synonymous with Industry 4.0"
+    ]
+  },
+  {
+    term: "Connected Factory",
+    subtitle: "Integrated Manufacturing Ecosystem",
+    definition: "Integrated ecosystem where machines, systems, and people communicate seamlessly to enable real-time visibility, collaboration, and optimization.",
+    example: "Vehicle assembly where robots communicate with inventory systems, quality data flows to engineers in real-time, and maintenance teams receive automatic alerts from production equipment.",
+    color: "cyan",
+    icon: Network,
+    keyPoints: [
+      "Seamless communication between all factory elements",
+      "Real-time data sharing across departments",
+      "Integration of IT and OT systems",
+      "Enables coordinated decision-making and action"
     ]
   }
 ];
@@ -41,7 +55,7 @@ const digitalSpectrum = [
     term: "Digitization",
     definition: "Converting analog/physical information into digital format",
     example: "Scanning paper documents to PDFs, converting handwritten logs to Excel, digitizing photos and videos",
-    terumoExample: "Scanning handwritten machine readings into a computer system",
+    marutiExample: "Scanning handwritten production logs and quality inspection reports into a computer system",
     color: "purple",
     icon: Database,
     focus: "About Data Conversion",
@@ -57,7 +71,7 @@ const digitalSpectrum = [
     term: "Digitalization", 
     definition: "Using digital technologies to improve or automate processes and workflows",
     example: "Apps that auto-create work orders from digital data, online banking replacing branch visits, GPS navigation optimizing delivery routes",
-    terumoExample: "ERP system automatically planning blood bag production when orders come in, rather than manual planning",
+    marutiExample: "ERP system automatically planning vehicle production schedule when dealer orders come in, rather than manual planning",
     color: "orange",
     icon: Cog,
     focus: "About Process Improvement",
@@ -73,7 +87,7 @@ const digitalSpectrum = [
     term: "Digital Transformation",
     definition: "Holistic integration of digital technology into all business areas, fundamentally changing operations and value delivery",
     example: "Netflix transforming from DVD mail service to streaming platform, banks offering mobile-first services, smart factories with data-driven culture",
-    terumoExample: "Fully integrated digital ecosystem from factory floor to corporate offices, with cultural shift to data-driven decision making",
+    marutiExample: "Fully integrated digital ecosystem from assembly lines to corporate offices, with cultural shift to data-driven decision making across all levels",
     color: "red",
     icon: Factory,
     focus: "About Business & Culture Change",
@@ -112,6 +126,7 @@ const BuzzwordsSection: React.FC<BuzzwordsSectionProps> = ({ onComplete }) => {
     const colors = {
       blue: 'bg-blue-50 border-blue-200 text-blue-900',
       green: 'bg-green-50 border-green-200 text-green-900',
+      cyan: 'bg-cyan-50 border-cyan-200 text-cyan-900',
       purple: 'bg-purple-50 border-purple-200 text-purple-900',
       orange: 'bg-orange-50 border-orange-200 text-orange-900',
       red: 'bg-red-50 border-red-200 text-red-900'
@@ -123,6 +138,7 @@ const BuzzwordsSection: React.FC<BuzzwordsSectionProps> = ({ onComplete }) => {
     const colors = {
       blue: 'text-blue-600',
       green: 'text-green-600',
+      cyan: 'text-cyan-600',
       purple: 'text-purple-600',
       orange: 'text-orange-600',
       red: 'text-red-600'
@@ -141,14 +157,14 @@ const BuzzwordsSection: React.FC<BuzzwordsSectionProps> = ({ onComplete }) => {
         <p className="text-gray-600">Let's clarify the key terms we'll be using throughout this workshop</p>
       </div>
 
-      {/* Industry 4.0 vs Smart Manufacturing */}
+      {/* Industry 4.0, Smart Manufacturing & Connected Factory */}
       <div className="bg-white rounded-xl shadow-lg p-8">
-        <h2 className="text-2xl font-bold text-gray-900 text-center mb-6">Industry 4.0 vs Smart Manufacturing</h2>
+        <h2 className="text-2xl font-bold text-gray-900 text-center mb-6">Core Industry 4.0 Concepts</h2>
         <p className="text-center text-gray-600 mb-8">
-          These terms are often used interchangeably - let's understand what they really mean
+          These terms are closely related and often used together - let's understand what each one means
         </p>
         
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
           {mainConcepts.map((concept, index) => {
             const Icon = concept.icon;
             const isSelected = selectedConcept === index;
@@ -190,7 +206,7 @@ const BuzzwordsSection: React.FC<BuzzwordsSectionProps> = ({ onComplete }) => {
                       </div>
                       
                       <div className={`p-4 rounded-lg border-l-4 ${getColorClasses(concept.color)}`}>
-                        <h4 className="font-semibold mb-2">Terumo Example:</h4>
+                        <h4 className="font-semibold mb-2">Maruti Suzuki Example:</h4>
                         <p className="text-sm">{concept.example}</p>
                       </div>
                       
@@ -224,10 +240,10 @@ const BuzzwordsSection: React.FC<BuzzwordsSectionProps> = ({ onComplete }) => {
           <div className="bg-gradient-to-r from-blue-500 to-green-500 rounded-xl p-6 text-white text-center animate-fadeIn">
             <h3 className="text-xl font-bold mb-2">Key Insight</h3>
             <p className="text-lg opacity-90">
-              Industry 4.0 is the buzzword or era, Smart Manufacturing is what you do in that era
+              Industry 4.0 is the era, Smart Manufacturing is what you do, and Connected Factory is how everything works together
             </p>
             <p className="text-sm opacity-80 mt-2">
-              Think of Industry 4.0 as the time period we're in, and Smart Manufacturing as the actual implementation of intelligent, connected systems in our factory
+              Think of Industry 4.0 as the time period we're in, Smart Manufacturing as the implementation of intelligent systems, and Connected Factory as the seamless integration that makes it all possible
             </p>
             <button
               onClick={() => setShowComparison(true)}
@@ -306,8 +322,8 @@ const BuzzwordsSection: React.FC<BuzzwordsSectionProps> = ({ onComplete }) => {
                           </div>
                           
                           <div className={`p-4 rounded-lg border-l-4 ${getColorClasses(item.color)}`}>
-                            <h4 className="font-semibold mb-2">At Terumo Penpol:</h4>
-                            <p className="text-sm">{item.terumoExample}</p>
+                            <h4 className="font-semibold mb-2">At Maruti Suzuki:</h4>
+                            <p className="text-sm">{item.marutiExample}</p>
                           </div>
                          
                          <div>
@@ -392,8 +408,8 @@ const BuzzwordsSection: React.FC<BuzzwordsSectionProps> = ({ onComplete }) => {
           </p>
           <div className="bg-white rounded-lg p-4">
             <p className="text-sm text-gray-700 italic">
-              Example: "Last week a mixing machine overheated unexpectedly. If it had an automatic alert or shutoff, that would help." 
-              Those are exactly the kind of issues that Smart Manufacturing (in the Industry 4.0 era) aims to address with connected, intelligent systems.
+              Example: "Last week a welding robot malfunctioned unexpectedly causing production delay. If it had predictive alerts or automatic diagnostics, that would help."
+              Those are exactly the kind of issues that Smart Manufacturing and Connected Factories (in the Industry 4.0 era) aim to address with intelligent, integrated systems.
             </p>
           </div>
         </div>
